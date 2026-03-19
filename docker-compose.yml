@@ -1,0 +1,36 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: tax-engine-postgres
+    environment:
+      POSTGRES_DB: tax_engine
+      POSTGRES_USER: tax_user
+      POSTGRES_PASSWORD: tax_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./src/main/resources/db/migration/V1__init_fact_extraction.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tax_user -d tax_engine"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  tax-engine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tax-engine-app
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/tax_engine
+      SPRING_DATASOURCE_USERNAME: tax_user
+      SPRING_DATASOURCE_PASSWORD: tax_password
+    ports:
+      - "8080:8080"
+
+volumes:
+  pgdata:
