@@ -2,7 +2,12 @@ package com.taxengine.facts.domain.model;
 
 import com.taxengine.facts.domain.enums.ExtractionMethod;
 import com.taxengine.facts.domain.enums.FactType;
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 import java.math.BigDecimal;
 import java.time.Instant;
@@ -31,17 +36,17 @@ public class Fact {
     @Column(name = "financial_year", nullable = false, updatable = false)
     private String financialYear;
 
-    @Column(name = "fact_data", nullable = false, updatable = false)
+    @Column(name = "fact_data", nullable = false, updatable = false, columnDefinition = "jsonb")
     private String factData;
 
-    @Column(name = "source_document_id", nullable = false, updatable = false)
+    @Column(name = "source_document_id", updatable = false)
     private UUID sourceDocumentId;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "extraction_method", nullable = false, updatable = false)
+    @Column(name = "extraction_method", updatable = false)
     private ExtractionMethod extractionMethod;
 
-    @Column(name = "confidence_score", nullable = false, updatable = false)
+    @Column(name = "confidence_score", updatable = false)
     private BigDecimal confidenceScore;
 
     @Column(name = "dedup_hash", nullable = false, updatable = false)
