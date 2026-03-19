@@ -1,0 +1,386 @@
+[
+  {
+    "pluginId": "SalaryIncomeClassificationPlugin",
+    "ruleId": "R001",
+    "section": "SEC-001",
+    "primitiveType": "INCOME",
+    "parameters": {
+      "factType": "SALARY",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "HousePropertyIncomePlugin",
+    "ruleId": "R002",
+    "section": "SEC-002",
+    "primitiveType": "INCOME",
+    "parameters": {
+      "factType": "HOUSE_PROPERTY",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "BusinessIncomePlugin",
+    "ruleId": "R003",
+    "section": "SEC-003",
+    "primitiveType": "INCOME",
+    "parameters": {
+      "factType": "BUSINESS",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "CapitalGainClassificationPlugin",
+    "ruleId": "R004",
+    "section": "SEC-004",
+    "primitiveType": "INCOME",
+    "parameters": {
+      "factType": "CAPITAL_GAIN",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "OtherSourcesIncomePlugin",
+    "ruleId": "R005",
+    "section": "SEC-005",
+    "primitiveType": "INCOME",
+    "parameters": {
+      "factType": "OTHER_SOURCE",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "AllowanceExemptionPlugin",
+    "ruleId": "R006",
+    "section": "SEC-006",
+    "primitiveType": "EXEMPTION",
+    "parameters": {
+      "factType": "ALLOWANCE",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "RetirementBenefitExemptionPlugin",
+    "ruleId": "R007",
+    "section": "SEC-007",
+    "primitiveType": "EXEMPTION",
+    "parameters": {
+      "factType": "RETIREMENT",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "AgricultureIncomePlugin",
+    "ruleId": "R008",
+    "section": "SEC-008",
+    "primitiveType": "EXEMPTION",
+    "parameters": {
+      "factType": "AGRICULTURE",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "GiftExemptionPlugin",
+    "ruleId": "R009",
+    "section": "SEC-009",
+    "primitiveType": "EXEMPTION",
+    "parameters": {
+      "factType": "GIFT",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "InvestmentDeductionPlugin",
+    "ruleId": "R010",
+    "section": "SEC-010",
+    "primitiveType": "DEDUCTION",
+    "parameters": {
+      "factType": "INVESTMENT",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "InsuranceDeductionPlugin",
+    "ruleId": "R011",
+    "section": "SEC-011",
+    "primitiveType": "DEDUCTION",
+    "parameters": {
+      "factType": "INSURANCE",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "InterestDeductionPlugin",
+    "ruleId": "R012",
+    "section": "SEC-012",
+    "primitiveType": "DEDUCTION",
+    "parameters": {
+      "factType": "INTEREST",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "DonationDeductionPlugin",
+    "ruleId": "R013",
+    "section": "SEC-013",
+    "primitiveType": "DEDUCTION",
+    "parameters": {
+      "factType": "DONATION",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "LossSetoffPlugin",
+    "ruleId": "R014",
+    "section": "SEC-014",
+    "primitiveType": "ADJUSTMENT",
+    "parameters": {
+      "factType": "LOSS",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "CapitalLossSetoffPlugin",
+    "ruleId": "R015",
+    "section": "SEC-015",
+    "primitiveType": "ADJUSTMENT",
+    "parameters": {
+      "factType": "CAPITAL_LOSS",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "CarryForwardLossPlugin",
+    "ruleId": "R016",
+    "section": "SEC-016",
+    "primitiveType": "ADJUSTMENT",
+    "parameters": {
+      "factType": "CARRY_FORWARD",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "SlabTaxPlugin",
+    "ruleId": "R017",
+    "section": "SEC-017",
+    "primitiveType": "TAX_RATE",
+    "parameters": {
+      "factType": "SALARY",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000,
+      "rate": 0.1
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "CapitalGainTaxPlugin",
+    "ruleId": "R018",
+    "section": "SEC-018",
+    "primitiveType": "TAX_RATE",
+    "parameters": {
+      "factType": "CAPITAL_GAIN",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000,
+      "rate": 0.1
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "SpecialIncomeTaxPlugin",
+    "ruleId": "R019",
+    "section": "SEC-019",
+    "primitiveType": "TAX_RATE",
+    "parameters": {
+      "factType": "SPECIAL_INCOME",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000,
+      "rate": 0.1
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "CryptoTaxPlugin",
+    "ruleId": "R020",
+    "section": "SEC-020",
+    "primitiveType": "TAX_RATE",
+    "parameters": {
+      "factType": "CRYPTO",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000,
+      "rate": 0.1
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "TdsCreditPlugin",
+    "ruleId": "R021",
+    "section": "SEC-021",
+    "primitiveType": "TAX_CREDIT",
+    "parameters": {
+      "factType": "TDS",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000,
+      "rate": 1.0
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "AdvanceTaxCreditPlugin",
+    "ruleId": "R022",
+    "section": "SEC-022",
+    "primitiveType": "TAX_CREDIT",
+    "parameters": {
+      "factType": "ADVANCE_TAX",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000,
+      "rate": 1.0
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "ForeignTaxCreditPlugin",
+    "ruleId": "R023",
+    "section": "SEC-023",
+    "primitiveType": "TAX_CREDIT",
+    "parameters": {
+      "factType": "FOREIGN_TAX",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000,
+      "rate": 1.0
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "ItrFilingCompliancePlugin",
+    "ruleId": "R024",
+    "section": "SEC-024",
+    "primitiveType": "COMPLIANCE",
+    "parameters": {
+      "factType": "ITR_FILED",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000,
+      "penalty": 1000
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  },
+  {
+    "pluginId": "AdvanceTaxCompliancePlugin",
+    "ruleId": "R025",
+    "section": "SEC-025",
+    "primitiveType": "COMPLIANCE",
+    "parameters": {
+      "factType": "COMPLIANCE_EVENT",
+      "threshold": 0,
+      "limit": 1000000000,
+      "cap": 1000000000,
+      "penalty": 1000
+    },
+    "financialYear": "FY2025",
+    "regime": "NEW",
+    "enabled": true
+  }
+]
