@@ -16,21 +16,24 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class PluginEvaluationTest {
 
     @Test
-    void shouldEvaluatePluginUsingRuleConfigWithoutHardcodedValues() {
+    void shouldEvaluateSalaryPluginUsingConfiguredComponentRule() {
         var plugin = new SalaryIncomeClassificationPlugin();
         var context = new TaxContext(
                 new Taxpayer("TP1", "ABCDE1234F", "RESIDENT"),
                 new TaxPeriod("FY2025", "AY2026", "NEW"),
                 Map.of(),
-                new FactIndex(List.of(new Fact("F1", FactType.SALARY, "P1", new BigDecimal("120000"), Map.of())))
+                new FactIndex(List.of(
+                        new Fact("F1", FactType.SALARY, "P1", new BigDecimal("120000"), Map.of("component", "BASIC_SALARY")),
+                        new Fact("F2", FactType.SALARY, "P1", new BigDecimal("30000"), Map.of("component", "BONUS"))
+                ))
         );
 
-        RuleConfig rule = new RuleConfig(
-                plugin.pluginId(), "R1", "S17", PrimitiveType.INCOME,
-                Map.of("factType", "SALARY", "threshold", 10000, "cap", 90000, "limit", 100000),
+        RuleConfig basicRule = new RuleConfig(
+                plugin.pluginId(), "SALARY_BASIC_001", "S17", PrimitiveType.INCOME,
+                Map.of("component", "BASIC_SALARY", "subCategory", "BASIC"),
                 "FY2025", "NEW", true);
 
-        var result = plugin.evaluate(context, new TaxComputationState(), List.of(rule));
-        assertEquals(new BigDecimal("90000.00"), result.computations().getFirst().impacts().getFirst().allowedAmount());
+        var result = plugin.evaluate(context, new TaxComputationState(), List.of(basicRule));
+        assertEquals(new BigDecimal("120000.00"), result.computations().getFirst().impacts().getFirst().allowedAmount());
     }
 }
