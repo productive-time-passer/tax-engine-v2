@@ -110,6 +110,10 @@ You can now call the same APIs on `http://localhost:8080`.
 
 ## 5) API cheatsheet
 
+### OpenAPI / Swagger
+- Swagger UI: `http://localhost:8080/swagger-ui.html`
+- OpenAPI spec (JSON): `http://localhost:8080/v3/api-docs`
+
 ### Documents
 - `POST /documents/upload` (multipart: `taxpayerId`, `file`)
 - `POST /documents/{id}/process?documentType=payslip`
