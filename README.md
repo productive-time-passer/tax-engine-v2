@@ -62,6 +62,17 @@ curl -s "http://localhost:8080/facts/${TAXPAYER_ID}"
 
 You should see one or more persisted fact records.
 
+
+## Run tests
+
+```bash
+./gradlew test --no-daemon
+```
+
+Notes:
+- This repository includes a lightweight `./gradlew` shim so test commands work even when the full Gradle wrapper JAR is not available in the environment.
+- When the active runtime is Java 25+, the shim prefers JDK 21 automatically (if installed) to avoid known Gradle Kotlin DSL startup/version parsing failures.
+
 ## Stop and clean up
 
 Stop services:
