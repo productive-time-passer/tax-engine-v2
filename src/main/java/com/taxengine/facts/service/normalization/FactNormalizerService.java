@@ -11,9 +11,9 @@ public class FactNormalizerService implements FactNormalizer {
     @Override
     public CanonicalFactCandidate normalize(CanonicalFactCandidate candidate) {
         var normalized = new LinkedHashMap<String, Object>();
+        normalized.putAll(candidate.factData());
         normalized.put("amount", candidate.amount());
         normalized.put("transactionDate", candidate.transactionDate());
-        normalized.put("details", candidate.factData());
         normalized.put("financialYear", candidate.financialYear());
 
         return new CanonicalFactCandidate(

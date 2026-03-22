@@ -37,7 +37,7 @@ class DeduplicationServiceImplTest {
         UUID taxpayer = UUID.fromString("aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa");
         LocalDate date = LocalDate.of(2025, 4, 1);
         return new CanonicalFactCandidate(
-                taxpayer, null, "FY2025", FactType.EXPENSE,
+                taxpayer, null, "FY2025", FactType.MEDICAL_EXPENSE_FACT,
                 Map.of("amount", "500"), UUID.randomUUID(), "same-doc-hash",
                 ExtractionMethod.OCR, BigDecimal.ONE, BigDecimal.valueOf(500), date
         );
