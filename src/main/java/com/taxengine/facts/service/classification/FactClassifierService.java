@@ -46,7 +46,7 @@ public class FactClassifierService implements FactClassifier {
             case "foreignincomefact", "foreign_income_fact" -> FactType.FOREIGN_INCOME_FACT;
             case "otherincomefact", "other_income_fact", "income" -> FactType.OTHER_INCOME_FACT;
 
-            case "rentpaymentfact", "rent_payment_fact" -> FactType.RENT_PAYMENT_FACT;
+            case "rentpaymentfact", "rent_payment_fact", "hraallowancefact", "hra_allowance_fact" -> FactType.RENT_PAYMENT_FACT;
             case "insurancepremiumfact", "insurance_premium_fact" -> FactType.INSURANCE_PREMIUM_FACT;
             case "medicalexpensefact", "medical_expense_fact" -> FactType.MEDICAL_EXPENSE_FACT;
             case "educationexpensefact", "education_expense_fact" -> FactType.EDUCATION_EXPENSE_FACT;
@@ -76,8 +76,12 @@ public class FactClassifierService implements FactClassifier {
     private BigDecimal extractAmount(Map<String, Object> fields) {
         Object salary = fields.get("salary_amount");
         Object expense = fields.get("expense_amount");
+        Object rent = fields.get("rent_amount");
+        Object hra = fields.get("hra_amount");
         Object fallback = fields.get("amount");
-        Object selected = salary != null ? salary : (expense != null ? expense : fallback);
+        Object selected = salary != null
+                ? salary
+                : (expense != null ? expense : (rent != null ? rent : (hra != null ? hra : fallback)));
         return selected == null ? BigDecimal.ZERO : new BigDecimal(selected.toString());
     }
 }

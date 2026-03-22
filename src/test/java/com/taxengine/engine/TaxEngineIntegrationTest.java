@@ -54,7 +54,7 @@ class TaxEngineIntegrationTest {
         );
 
         TaxEngineResult result = engine.compute(context);
-        assertEquals(29, result.ledger().size());
+        assertEquals(28, result.ledger().size());
         assertTrue(result.finalTaxPayable().compareTo(BigDecimal.ZERO) >= 0);
     }
 
